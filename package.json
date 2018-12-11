@@ -1,0 +1,22 @@
+{
+  "name": "ejs-compiled-loader-webpack4-nodeps",
+  "version": "0.0.1",
+  "description": "Webpack 4+ loader to compile EJS templates. Does not depend on htmlmin, uglify-js, or other packages that may cause issues.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/testerum/ejs-compiled-loader-webpack4-nodeps.git"
+  },
+  "keywords": [
+    "ejs",
+    "webpack",
+    "loader",
+    "template"
+  ],
+  "author": "Testerum Soft S.R.L. <contact@testerum.com>",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/testerum/ejs-compiled-loader-webpack4-nodeps",
+  "bugs": {
+    "url": "https://github.com/testerum/ejs-compiled-loader-webpack4-nodeps/issues"
+  }
+}
