@@ -60,6 +60,12 @@ module.exports = {
 Everything inside ``ejsOptions`` will be passed to EJS.
 
 
+## Limitations
+
+### Includes
+Includes don't seem to work: you get an error at runtime that ``include is not a function``.
+If you know how to make this work, pull request are welcome.
+
 ## Release history
 * 0.0.1 - Initial release
 
