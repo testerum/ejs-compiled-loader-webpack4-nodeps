@@ -21,6 +21,21 @@ This package does not depend on ``htmlmin``, ``uglify-js``, or other packages th
 
 ## Webpack config
 
+Minimum required configuration:
+```javascript
+module.exports = {
+    module: {
+        rules: [
+            {
+                test: /\.ejs$/,
+                use: "@testerum/ejs-compiled-loader-webpack4-nodeps"
+            }
+        ]
+    }
+};
+```
+
+It's also possible to pass options to EJS:
 ```javascript
 module.exports = {
     module: {
@@ -29,7 +44,12 @@ module.exports = {
                 test: /\.ejs$/,
                 use: [
                     {
-                        loader: "ejs-compiled-loader-webpack4-nodeps"
+                        loader: "@testerum/ejs-compiled-loader-webpack4-nodeps",
+                        options: {
+                            ejsOptions: {
+                                compileDebug: true
+                            }
+                        }
                     }
                 ]
             }
@@ -37,6 +57,7 @@ module.exports = {
     }
 };
 ```
+Everything inside ``ejsOptions`` will be passed to EJS.
 
 
 ## Release history

@@ -1,17 +1,22 @@
 const path = require("path");
+const loader_utils = require("loader-utils");
 const ejs = require("ejs");
+
+function cloneFields(object) {
+    return JSON.parse(
+        JSON.stringify(object)
+    );
+}
 
 module.exports = function (source) {
     this.cacheable && this.cacheable();
 
-    const opts = {};
-    opts.client = true;
+    // cloning options, to make sure we don't alter them by mistake between invocations
+    const options = cloneFields(loader_utils.getOptions(this));
 
-    // Skip compile debug for production when running with
-    // webpack --optimize-minimize
-    if (this.minimize) {
-        opts.compileDebug = false;
-    }
+    const opts = ((options || {}).ejsOptions) || {};
+
+    opts.client = true;
 
     // Use filenames relative to working dir, which should be project root
     opts.filename = path.relative(process.cwd(), this.resourcePath);
