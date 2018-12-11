@@ -1,5 +1,5 @@
 {
-  "name": "ejs-compiled-loader-webpack4-nodeps",
+  "name": "@testerum/ejs-compiled-loader-webpack4-nodeps",
   "version": "0.0.1",
   "description": "Webpack 4+ loader to compile EJS templates. Does not depend on htmlmin, uglify-js, or other packages that may cause issues.",
   "main": "index.js",
@@ -18,5 +18,8 @@
   "homepage": "https://github.com/testerum/ejs-compiled-loader-webpack4-nodeps",
   "bugs": {
     "url": "https://github.com/testerum/ejs-compiled-loader-webpack4-nodeps/issues"
+  },
+  "dependencies": {
+    "ejs": "2.6.1"
   }
 }
