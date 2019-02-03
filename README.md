@@ -59,6 +59,8 @@ module.exports = {
 ```
 Everything inside ``ejsOptions`` will be passed to EJS.
 
+## Demo
+You can find a demo project at [@testerum/ejs-compiled-loader-webpack4-nodeps-ts-demo](https://github.com/testerum/ejs-compiled-loader-webpack4-nodeps-ts-demo/).
 
 ## Limitations
 
