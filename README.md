@@ -59,8 +59,10 @@ module.exports = {
 ```
 Everything inside ``ejsOptions`` will be passed to EJS.
 
-## Demo
-You can find a demo project at [@testerum/ejs-compiled-loader-webpack4-nodeps-ts-demo](https://github.com/testerum/ejs-compiled-loader-webpack4-nodeps-ts-demo/).
+## Usage
+This plugin will compile EJS templates at build-time. That means that when doing ``require("./my-template.ejs")``, you get back a compiled template. A compiled template is a JavaScript function with the following signature: ``function render(model: Object): string`` - that is, you get back a function that evaluates the template with the given model and returns a string.
+
+For details, check the demo project at [@testerum/ejs-compiled-loader-webpack4-nodeps-ts-demo](https://github.com/testerum/ejs-compiled-loader-webpack4-nodeps-ts-demo/).
 
 ## Limitations
 
